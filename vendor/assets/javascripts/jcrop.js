@@ -1,5 +1,5 @@
 /**
- * jquery.Jcrop.js v0.9.12
+ * jquery.Jcrop.js v0.9.14
  * jQuery Image Cropping Plugin - released under MIT License
  * Author: Kelly Hallman <khallman@gmail.com>
  * http://github.com/tapmodo/Jcrop
@@ -29,7 +29,7 @@
  * }}}
  */
 
-(function ($) {
+define(['jquery'], function ($) {
 
   $.Jcrop = function (obj, opt) {
     var options = $.extend({}, $.Jcrop.defaults),
@@ -228,10 +228,10 @@
     function newSelection(e) //{{{
     {
       if (options.disabled) {
-        return false;
+        return;
       }
       if (!options.allowSelect) {
-        return false;
+        return;
       }
       btndown = true;
       docOffset = getPos($img);
@@ -1691,4 +1691,4 @@
   };
 
   // }}}
-}(jQuery));
+});
