@@ -29,7 +29,7 @@
  * }}}
  */
 
-define(['jquery'], function ($) {
+(function ($) {
 
   $.Jcrop = function (obj, opt) {
     var options = $.extend({}, $.Jcrop.defaults),
@@ -1691,4 +1691,4 @@ define(['jquery'], function ($) {
   };
 
   // }}}
-});
+}(jQuery));
